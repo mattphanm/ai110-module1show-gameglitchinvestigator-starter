@@ -19,14 +19,14 @@ def test_guess_too_high():
     # I used the AI's suggestion to assert the message text here, not just the outcome label.
     result, message = check_guess(60, 50)
     assert result == "Too High"
-    assert message == "📈 Go HIGHER!"
+    assert message == "📈 Go Lower!"
 
 def test_guess_too_low():
     # If secret is 50 and guess is 40, hint should be "Too Low"
     # I kept the AI-driven regression check so the lower-hint text stays covered too.
     result, message = check_guess(40, 50)
     assert result == "Too Low"
-    assert message == "📉 Go LOWER!"
+    assert message == "📉 Go Higher!"
 
 
 def test_check_guess_behaves_like_a_string():
