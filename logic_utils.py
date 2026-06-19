@@ -75,8 +75,8 @@ def check_guess(guess, secret):
         return GuessResult("Win", "🎉 Correct!")
 
     if guess > secret:
-        return GuessResult("Too High", "📈 Go HIGHER!")
-    return GuessResult("Too Low", "📉 Go LOWER!")
+        return GuessResult("Too High", "📈 Go Lower!")
+    return GuessResult("Too Low", "📉 Go Higher!")
 
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
