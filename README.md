@@ -25,19 +25,22 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] Describe the game's purpose.
+  - The game is a Streamlit number guessing game where the player tries to find a secret number within a limited number of attempts. It gives higher/lower hints, tracks attempts, and updates the score based on the result.
+- [x] Detail which bugs you found.
+  - The hints were backwards, the first submit did not show the updated attempt count correctly, and New Game did not fully reset the previous round. Difficulty settings also needed consistent ranges and attempt limits.
+- [x] Explain what fixes you applied.
+  - I moved the shared game logic into `logic_utils.py`, fixed the guess comparison and scoring logic, added a reset helper for new games, refreshed the attempt display after submits, and added pytest/Streamlit regression tests.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
-
-1. User enters a guess of 20
-2. Game returns 
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+Secret: 35
+1. User enters a guess of 36
+2. Game returns "Go Lower!"
+3. User enters a guess of 34
+4. Game returns "Go Higher!"
+5. Game Ends after correct guess or ends after given attempts and shows "Out of attempts! The secret was 27. Score: 0" 
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
