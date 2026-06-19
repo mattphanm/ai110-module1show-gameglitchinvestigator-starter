@@ -47,9 +47,13 @@ Secret: 35
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+tests/test_attempt_display.py ...                              [ 15%]
+tests/test_fix_comments.py ...                                 [ 30%]
+tests/test_game_logic.py ........                              [ 70%]
+tests/test_new_game_reset.py .....                             [ 95%]
+tests/test_reset_game_state.py .                               [100%]
+
+========================= 20 passed in 0.31s =========================
 ```
 
 ## 🚀 Stretch Features
